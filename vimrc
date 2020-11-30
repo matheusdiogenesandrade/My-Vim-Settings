@@ -1,6 +1,3 @@
-call pathogen#infect()
-call pathogen#helptags()
-
 set hidden
 set number
 set vb t_vb=
@@ -12,6 +9,8 @@ if has("autocmd")
   filetype plugin indent on
 endif
 
-" vim-latex-live-preview settings
-autocmd Filetype tex setl updatetime=1
-let g:livepreview_previewer = 'open -a Preview'
+call plug#begin()
+Plug 'JuliaEditorSupport/julia-vim'
+Plug 'lervag/vimtex'
+call plug#end()
+
